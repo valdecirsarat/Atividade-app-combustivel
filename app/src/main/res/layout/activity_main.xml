@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bomba"
+    tools:context=".MainActivity">
+
+    <EditText
+
+        android:id="@+id/valorEntanol"
+        android:layout_width="177dp"
+        android:layout_height="55dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="Ex.: 0.00"
+        android:inputType="numberDecimal"
+        android:textColorHint="#1e2022"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textoGasolina"
+        app:layout_constraintEnd_toStartOf="@+id/valorConsumoEtanol"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoEtanol"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textoResultado"
+        android:layout_width="342dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="24dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalcular"
+        app:layout_constraintVertical_bias="0.143" />
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="135dp"
+        android:layout_height="56dp"
+
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="107dp"
+        android:text="CALCULAR"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCancelar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valorConsumoGasolina" />
+
+    <Button
+        android:id="@+id/buttonCancelar"
+        android:layout_width="106dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="57dp"
+        android:text="SAIR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valorGasolina" />
+
+    <TextView
+        android:id="@+id/textoEtanol"
+        android:layout_width="177dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="1dp"
+        android:text="Valor Etanol:"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/valorEntanol"
+        app:layout_constraintEnd_toStartOf="@+id/textoConsumoEtanol"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/valorConsumoGasolina"
+        android:layout_width="182dp"
+        android:layout_height="48dp"
+
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:hint="Ex.: 0.00"
+        android:inputType="numberDecimal"
+        android:textColorHint="#1e2022"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCalcular"
+        app:layout_constraintEnd_toStartOf="@+id/valorGasolina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoGasolina" />
+
+    <EditText
+        android:id="@+id/valorGasolina"
+        android:layout_width="174dp"
+        android:layout_height="48dp"
+
+        android:layout_marginStart="28dp"
+        android:ems="10"
+        android:hint="Ex.: 0.00"
+        android:inputType="numberDecimal"
+        android:textColorHint="#1e2022"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/valorConsumoGasolina"
+        app:layout_constraintTop_toBottomOf="@+id/textoConsumoGasolina" />
+
+    <TextView
+        android:id="@+id/textoConsumoGasolina"
+        android:layout_width="174dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="16dp"
+        android:text="Consumo Gasolina:"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/textoGasolina"
+        app:layout_constraintTop_toBottomOf="@+id/valorConsumoEtanol" />
+
+    <TextView
+        android:id="@+id/textoGasolina"
+        android:layout_width="180dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="19dp"
+        android:text="Valor Gasolina:"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valorEntanol" />
+
+    <EditText
+        android:id="@+id/valorConsumoEtanol"
+        android:layout_width="171dp"
+        android:layout_height="56dp"
+
+        android:layout_marginEnd="19dp"
+        android:ems="10"
+        android:hint="Ex.: 0.00"
+        android:inputType="numberDecimal"
+        android:textColorHint="#1e2022"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/valorEntanol"
+        app:layout_constraintTop_toBottomOf="@+id/textoConsumoEtanol" />
+
+    <TextView
+        android:id="@+id/textoConsumoEtanol"
+        android:layout_width="171dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="19dp"
+        android:text="Consumo Etanol:"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
